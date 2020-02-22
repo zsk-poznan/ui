@@ -1,17 +1,30 @@
-import React, { FunctionComponent } from "react";
+import styled from 'styled-components';
 
-interface ButtonProps {
-  /**
-   * Simple click handler
-   */
-  onClick?: () => void;
-}
+export const Button = styled.button`
+  background: ${(props: any) => props.theme.primaryColor};
+  color: ${(props: any) => props.theme.fontColor};
+  font-size: 24px;
+  border: none;
+  border-radius: 5px;
+  padding: 20px 40px;
+  width: 100%;
+  cursor: pointer;
 
-/**
- * The world's most _basic_ button
- */
-export const Button: FunctionComponent<ButtonProps> = ({ children, onClick }) => (
-  <button onClick={onClick} type="button">
-    {children}
-  </button>
-);
+  margin: 10px;
+
+  &:hover {
+    /*background: #5d6e88;*/
+  }
+
+  &:focus {
+    background: ${(props: any) => props.theme.secondaryColor};
+  }
+`;
+
+Button.defaultProps = {
+  theme: {
+    primaryColor: '#4C5D78',
+    secondaryColor: '#6d7e98',
+    fontColor: '#ffffff',
+  },
+};
