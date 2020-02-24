@@ -1,0 +1,31 @@
+import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
+import { AppShell } from '../AppShell';
+import { Button } from '../components/Button';
+
+<Meta title="AppShell" />
+
+# AppShell
+
+Root component of the application. Thanks to it you can control the theme of the app.
+
+<Props of={AppShell} />
+
+## Usage
+
+```jsx
+import { AppShell, Button } from '@zsk-poznan/ui';
+
+const App = () => {
+  <AppShell theme="dark">
+    <Button>This is a button in dark theme</Button>
+  </AppShell>;
+};
+```
+
+<Preview>
+  <Story name="defaut">
+    <AppShell theme="dark">
+      <Button>This is a button in dark theme</Button>
+    </AppShell>
+  </Story>
+</Preview>
