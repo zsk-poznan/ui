@@ -29,7 +29,7 @@ export const darkTheme = {
   borderColor: '#4E5E76',
   primaryColor: '#4E5E76',
   secondaryColor: '#9AA5B6',
-  classroomFontColor: '#000000',
+  classroomFontColor: '#2E3B4E',
   classroomBgColor: {
     fredry: '#C2D2EB',
     bukowska: '#E07474',
