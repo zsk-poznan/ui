@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Button = styled.button`
   background: ${(props: any) => props.theme.primaryColor};
@@ -9,22 +9,11 @@ export const Button = styled.button`
   padding: 20px 40px;
   width: 100%;
   cursor: pointer;
-
   margin: 10px;
-
   &:hover {
     /*background: #5d6e88;*/
   }
-
   &:focus {
     background: ${(props: any) => props.theme.secondaryColor};
   }
 `;
-
-Button.defaultProps = {
-  theme: {
-    primaryColor: '#4C5D78',
-    secondaryColor: '#6d7e98',
-    fontColor: '#ffffff',
-  },
-};
