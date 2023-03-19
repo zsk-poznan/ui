@@ -1,19 +1,21 @@
-import styled from "styled-components";
+import { SmoothCorners } from "react-smooth-corners";
+import { StyledButton } from "./Button.styled";
+import type { ButtonProps } from "../../types/button";
 
-export const Button = styled.button`
-  background: ${(props: any) => props.theme.primaryColor};
-  color: ${(props: any) => props.theme.fontColor};
-  font-size: 24px;
-  border: none;
-  border-radius: 5px;
-  padding: 20px 40px;
-  width: 100%;
-  cursor: pointer;
-  margin: 10px;
-  &:hover {
-    /*background: #5d6e88;*/
-  }
-  &:focus {
-    background: ${(props: any) => props.theme.secondaryColor};
-  }
-`;
+export const Button: React.FC<ButtonProps> = ({
+  label,
+  borderRadius,
+  corners,
+  ...props
+}) => {
+  return (
+    <SmoothCorners
+      corners={corners ? corners : "180, 5"}
+      borderRadius={borderRadius ? borderRadius : "12px"}
+      as={StyledButton}
+      {...props}
+    >
+      {label}
+    </SmoothCorners>
+  );
+};

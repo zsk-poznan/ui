@@ -1,25 +1,34 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-
-import { Header } from './Header';
+import React from "react";
+import { ComponentMeta } from "@storybook/react";
+import { UIStyles, Header, lightTheme, darkTheme } from "../src/";
+import { ThemeProvider } from "styled-components";
 
 export default {
-  title: 'Example/Header',
+  title: "Components/Header",
   component: Header,
+  argTypes: {
+    variant: {
+      control: { type: "select", options: ["light", "dark"] },
+    },
+  },
   parameters: {
-    // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
-    layout: 'fullscreen',
+    layout: "fullscreen",
   },
 } as ComponentMeta<typeof Header>;
 
-const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
-
-export const LoggedIn = Template.bind({});
-LoggedIn.args = {
-  user: {
-    name: 'Jane Doe',
-  },
+const getTheme = (variant: string) => {
+  return variant === "light" ? lightTheme : darkTheme;
 };
 
-export const LoggedOut = Template.bind({});
-LoggedOut.args = {};
+const HeaderTemplate = (args) => (
+  <ThemeProvider theme={getTheme(args.variant)}>
+    <UIStyles />
+    <Header {...args} />
+  </ThemeProvider>
+);
+
+export const Default = HeaderTemplate.bind({});
+Default.args = {
+  label: "Zastępstwa",
+  variant: "light",
+};

@@ -1,41 +1,33 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { ComponentMeta } from "@storybook/react";
+import { UIStyles, Button, lightTheme, darkTheme } from "../src/";
+import { ThemeProvider } from "styled-components";
 
-import { Button } from "../src/components/Button";
-
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Example/Button",
+  title: "Components/Button",
   component: Button,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    backgroundColor: { control: "color" },
+    variant: {
+      control: { type: "inline-radio", options: ["Light", "Dark"] },
+    },
   },
 } as ComponentMeta<typeof Button>;
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
-
-export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-  primary: true,
-  label: "Button",
+const getTheme = (variant: string) => {
+  return variant === "Light" ? lightTheme : darkTheme;
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: "Button",
-};
+const ButtonTemplate = (args) => (
+  <ThemeProvider theme={getTheme(args.variant)}>
+    <UIStyles />
+    <Button {...args} />
+  </ThemeProvider>
+);
 
-export const Large = Template.bind({});
-Large.args = {
-  size: "large",
-  label: "Button",
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: "small",
-  label: "Button",
+export const Default = ButtonTemplate.bind({});
+Default.args = {
+  label: "Example Button",
+  borderRadius: "12px",
+  corners: "180, 5",
+  variant: "Light",
 };

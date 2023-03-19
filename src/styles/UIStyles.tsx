@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
+import type { Theme } from "../types";
 
-export const GlobalStyles = createGlobalStyle`
+export const UIStyles = createGlobalStyle<{ theme: Theme }>`
   html, body {
     padding: 0;
     margin: 0;
@@ -11,6 +12,6 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen;
+    background: ${(props) => props.theme.bgColor};
   }
 `;
