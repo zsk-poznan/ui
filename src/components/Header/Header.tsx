@@ -1,5 +1,6 @@
 import { StyledHeader } from "./Header.styled";
+import type { HeaderProps } from "../../types";
 
-export const Header = () => {
-  return <StyledHeader>Header</StyledHeader>;
+export const Header = ({ children }: HeaderProps) => {
+  return <StyledHeader>{children}</StyledHeader>;
 };

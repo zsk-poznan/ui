@@ -34,7 +34,6 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "corner-smoothing": "^0.1.3",
     "react-smooth-corners": "^1.0.4",
     "styled-components": "^5.3.9",
     "webfontloader": "^1.6.28"

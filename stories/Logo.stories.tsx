@@ -1,30 +1,31 @@
 import React from "react";
 import { ComponentMeta } from "@storybook/react";
-import { UIStyles, Button } from "../src/";
+import { UIStyles, Logo } from "../src/";
 import { ThemeProvider } from "styled-components";
 import { getTheme } from "./utils";
 
 export default {
-  title: "Components/Button",
-  component: Button,
+  title: "Components/Header/Logo",
+  component: Logo,
   argTypes: {
     variant: {
       control: { type: "inline-radio", options: ["Light", "Dark"] },
     },
   },
-} as ComponentMeta<typeof Button>;
+  parameters: {
+    layout: "fullscreen",
+  },
+} as ComponentMeta<typeof Logo>;
 
-const ButtonTemplate = (args) => (
+const LogoTemplate = (args) => (
   <ThemeProvider theme={getTheme(args.variant)}>
     <UIStyles />
-    <Button {...args} />
+    <Logo {...args} />
   </ThemeProvider>
 );
 
-export const Default = ButtonTemplate.bind({});
+export const Default = LogoTemplate.bind({});
 Default.args = {
-  label: "Example Button",
-  borderRadius: "12px",
-  corners: "180, 5",
+  label: "Zastępstwa",
   variant: "Light",
 };

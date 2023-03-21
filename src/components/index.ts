@@ -1,2 +1,2 @@
 export { Button } from "./Button";
-export { Header } from "./Header";
+export { Header, Logo } from "./Header";
