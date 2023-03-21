@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { StyledLogo } from "./Logo/Logo.styled";
 
 export const StyledHeader = styled.header`
   background: ${(props) => props.theme.bgColor};
@@ -6,6 +7,10 @@ export const StyledHeader = styled.header`
   font-family: ${(props) => props.theme.fontFamily};
   font-size: 24px;
   border: none;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 3rem;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 `;

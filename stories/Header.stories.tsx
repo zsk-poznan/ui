@@ -1,14 +1,15 @@
 import React from "react";
 import { ComponentMeta } from "@storybook/react";
-import { UIStyles, Header, lightTheme, darkTheme } from "../src/";
+import { UIStyles, Header, Logo } from "../src/";
 import { ThemeProvider } from "styled-components";
+import { getTheme } from "./utils";
 
 export default {
   title: "Components/Header",
   component: Header,
   argTypes: {
     variant: {
-      control: { type: "select", options: ["light", "dark"] },
+      control: { type: "inline-radio", options: ["Light", "Dark"] },
     },
   },
   parameters: {
@@ -16,19 +17,17 @@ export default {
   },
 } as ComponentMeta<typeof Header>;
 
-const getTheme = (variant: string) => {
-  return variant === "light" ? lightTheme : darkTheme;
-};
-
 const HeaderTemplate = (args) => (
   <ThemeProvider theme={getTheme(args.variant)}>
     <UIStyles />
-    <Header {...args} />
+    <Header>
+      <Logo {...args} />
+    </Header>
   </ThemeProvider>
 );
 
 export const Default = HeaderTemplate.bind({});
 Default.args = {
   label: "Zastępstwa",
-  variant: "light",
+  variant: "Light",
 };

@@ -11,12 +11,12 @@ const basicTheme = {
 
 export const lightTheme: Theme = {
   ...basicTheme,
-  bgColor: "#ffffff",
-  fontColor: "#2E3B4E",
-  borderColor: "#C2D2EB",
-  primaryColor: "#E6ECF6",
-  secondaryColor: "#A9B3C3",
-  classroomFontColor: "#ffffff",
+  bgColor: "#fafafa",
+  fontColor: "#222331",
+  borderColor: "#d2d3db",
+  primaryColor: "#e4e5f1",
+  secondaryColor: "#484b6a",
+  classroomFontColor: "#fafafa",
   classroomBgColor: {
     fredry: "#90A9CF",
     bukowska: "#E07474",

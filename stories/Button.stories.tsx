@@ -1,7 +1,8 @@
 import React from "react";
 import { ComponentMeta } from "@storybook/react";
-import { UIStyles, Button, lightTheme, darkTheme } from "../src/";
+import { UIStyles, Button } from "../src/";
 import { ThemeProvider } from "styled-components";
+import { getTheme } from "./utils";
 
 export default {
   title: "Components/Button",
@@ -12,10 +13,6 @@ export default {
     },
   },
 } as ComponentMeta<typeof Button>;
-
-const getTheme = (variant: string) => {
-  return variant === "Light" ? lightTheme : darkTheme;
-};
 
 const ButtonTemplate = (args) => (
   <ThemeProvider theme={getTheme(args.variant)}>
