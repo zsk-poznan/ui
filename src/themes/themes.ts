@@ -1,7 +1,7 @@
 import type { Theme } from "../types";
 
 const basicTheme = {
-  fontFamily: '"Inter", sans-serif',
+  fontFamily: "Poppins, sans-serif",
   classroomBgColor: {
     fredry: "#90A9CF",
     bukowska: "#E07474",
@@ -12,7 +12,7 @@ const basicTheme = {
 export const lightTheme: Theme = {
   ...basicTheme,
   bgColor: "#fafafa",
-  fontColor: "#222331",
+  fontColor: "#1A1A1A",
   borderColor: "#d2d3db",
   primaryColor: "#e4e5f1",
   secondaryColor: "#484b6a",

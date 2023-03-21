@@ -1,4 +1,3 @@
 export type { ButtonProps } from "./button";
-export type { HeaderProps } from "./header";
-export type { Theme } from "./themes";
-export type { LogoProps } from "./logo";
+export type { HeaderProps, LogoProps, DateProps } from "./Header";
+export type { Theme, ThemeProviderProps } from "./Theme";

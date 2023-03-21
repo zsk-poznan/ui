@@ -1,14 +1,8 @@
 import { StyledDate } from "./Date.styled";
+import type { DateProps } from "../../../types";
 
-export const Date = () => {
-  const date = new Date();
-  const day = date.getDate();
-  const month = date.toLocaleString("default", { month: "long" });
-  const year = date.getFullYear();
-
+export const SubstitutionDate = ({ date }: DateProps): JSX.Element => {
   return (
-    <StyledDate>
-      {day} {month} {year}
-    </StyledDate>
+    <StyledDate>{date.toLocaleString("pl-PL", { timeZone: "UTC" })}</StyledDate>
   );
 };

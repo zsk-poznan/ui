@@ -1,1 +1,1 @@
-export { UIStyles } from "./UIStyles";
+export { Styles } from "./UIStyles";

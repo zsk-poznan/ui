@@ -1,2 +1,2 @@
 export { Button } from "./Button";
-export { Header, Logo } from "./Header";
+export { Header, Logo, SubstitutionDate } from "./Header";

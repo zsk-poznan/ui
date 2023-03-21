@@ -1,24 +1,23 @@
 import React from "react";
 import { ComponentMeta } from "@storybook/react";
-import { UIStyles, Button } from "../src/";
-import { ThemeProvider } from "styled-components";
 import { getTheme } from "./utils";
+import * as UI from "../src";
 
 export default {
   title: "Components/Button",
-  component: Button,
+  component: UI.Button,
   argTypes: {
     variant: {
       control: { type: "inline-radio", options: ["Light", "Dark"] },
     },
   },
-} as ComponentMeta<typeof Button>;
+} as ComponentMeta<typeof UI.Button>;
 
 const ButtonTemplate = (args) => (
-  <ThemeProvider theme={getTheme(args.variant)}>
-    <UIStyles />
-    <Button {...args} />
-  </ThemeProvider>
+  <UI.UIThemeProvider theme={getTheme(args.variant)}>
+    <UI.Styles />
+    <UI.Button {...args} />
+  </UI.UIThemeProvider>
 );
 
 export const Default = ButtonTemplate.bind({});

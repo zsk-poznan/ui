@@ -11,11 +11,11 @@ export const StyledLogo = styled.div`
 
 export const StyledLogoIcon = styled.svg`
   path {
-    fill: ${(props) => props.theme.fontColor || "#fafafa"};
+    fill: ${(props) => props.theme.fontColor};
   }
 `;
 
 export const StyledLogoLabel = styled.span`
   font-size: 2.25em;
-  font-weight: 700;
+  font-weight: 600;
 `;
