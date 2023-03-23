@@ -17,5 +17,5 @@ export const StyledLogoIcon = styled.svg`
 
 export const StyledLogoLabel = styled.span`
   font-size: 2.25em;
-  font-weight: 600;
+  font-weight: 800;
 `;

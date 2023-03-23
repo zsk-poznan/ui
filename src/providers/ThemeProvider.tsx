@@ -7,7 +7,7 @@ export const UIThemeProvider = ({ children, theme }: ThemeProviderProps) => {
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ["Poppins:400,500,600,700,800,900"],
+        families: ["Poppins:300,400,500,600,700,800,900"],
       },
     });
   }, []);
