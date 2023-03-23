@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { StyledLogo } from "./Logo/Logo.styled";
 
 export const StyledHeader = styled.header`
   background: ${(props) => props.theme.bgColor};
@@ -13,4 +12,5 @@ export const StyledHeader = styled.header`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  flex: 1 1 0px;
 `;

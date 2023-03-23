@@ -21,6 +21,7 @@ const HeaderTemplate = (args) => (
     <UI.Styles />
     <UI.Header>
       <UI.Logo {...args} />
+      <UI.Title {...args} />
       <UI.SubstitutionDate {...args} />
     </UI.Header>
   </UI.UIThemeProvider>
@@ -29,6 +30,7 @@ const HeaderTemplate = (args) => (
 export const Default = HeaderTemplate.bind({});
 Default.args = {
   label: "Zastępstwa",
+  headerTitle: "Wszystkie zastępstwa",
   date: "22.03.2023 r.",
   variant: "Light",
 };
