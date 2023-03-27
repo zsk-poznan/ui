@@ -7,7 +7,7 @@ const basicTheme = {
     bukowska: "#E07474",
     wf: "#7CE074",
   },
-  notificationDotColor: "CD00000",
+  notificationDotColor: "#FF3030",
 };
 
 export const lightTheme: Theme = {

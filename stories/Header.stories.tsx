@@ -10,6 +10,9 @@ export default {
     variant: {
       control: { type: "inline-radio", options: ["Light", "Dark"] },
     },
+    notification: {
+      control: { type: "inline-radio", options: ["On", "Off"] },
+    },
   },
   parameters: {
     layout: "fullscreen",
@@ -22,7 +25,13 @@ const HeaderTemplate = (args) => (
     <UI.Header>
       <UI.Logo {...args} />
       <UI.Title {...args} />
-      <UI.SubstitutionDate {...args} />
+      {/On/i.test(args.notification) ? (
+        <UI.AnnouncementNotification>
+          <UI.SubstitutionDate {...args} />
+        </UI.AnnouncementNotification>
+      ) : (
+        <UI.SubstitutionDate {...args} />
+      )}
     </UI.Header>
   </UI.UIThemeProvider>
 );
@@ -31,6 +40,7 @@ export const Default = HeaderTemplate.bind({});
 Default.args = {
   label: "Zastępstwa",
   headerTitle: "Wszystkie zastępstwa",
-  date: "22.03.2023 r.",
+  date: "22.03.2023",
   variant: "Light",
+  notification: "On",
 };
