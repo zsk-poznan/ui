@@ -11,6 +11,7 @@ export const StyledButton = styled.button`
   cursor: pointer;
   margin: 10px;
   width: clip-text;
+  box-sizing: border-box;
 
   &:hover {
     /*background: #5d6e88;*/

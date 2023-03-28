@@ -1,21 +1,11 @@
-import { SmoothCorners } from "react-smooth-corners";
+import { Squircle } from "../Squircle";
 import { StyledButton } from "./Button.styled";
 import type { ButtonProps } from "../../types/button";
 
-export const Button: React.FC<ButtonProps> = ({
-  label,
-  borderRadius,
-  corners,
-  ...props
-}) => {
+export const Button: React.FC<ButtonProps> = ({ ...props }) => {
   return (
-    <SmoothCorners
-      corners={corners ? corners : "180, 5"}
-      borderRadius={borderRadius ? borderRadius : "12px"}
-      as={StyledButton}
-      {...props}
-    >
-      {label}
-    </SmoothCorners>
+    <Squircle as={StyledButton} {...props}>
+      {props.label}
+    </Squircle>
   );
 };

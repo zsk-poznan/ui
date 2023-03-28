@@ -4,8 +4,8 @@ import * as UI from "../src";
 import { getTheme } from "./utils";
 
 export default {
-  title: "Components/Header/Logo",
-  component: UI.Logo,
+  title: "Components/Header/Title",
+  component: UI.Title,
   argTypes: {
     variant: {
       control: { type: "inline-radio", options: ["Light", "Dark"] },
@@ -14,17 +14,21 @@ export default {
   parameters: {
     layout: "fullscreen",
   },
-} as ComponentMeta<typeof UI.Logo>;
+} as ComponentMeta<typeof UI.Title>;
 
-const LogoTemplate = (args) => (
+const TitleTemplate = (args) => (
   <UI.UIThemeProvider theme={getTheme(args.variant)}>
     <UI.Styles />
-    <UI.Logo {...args} />
+    <UI.Header>
+      <UI.Title {...args}>
+        <UI.ArrowLeft />
+      </UI.Title>
+    </UI.Header>
   </UI.UIThemeProvider>
 );
 
-export const Default = LogoTemplate.bind({});
+export const Default = TitleTemplate.bind({});
 Default.args = {
-  label: "Zastępstwa",
+  headerTitle: "Wszystkie zastępstwa",
   variant: "Light",
 };
