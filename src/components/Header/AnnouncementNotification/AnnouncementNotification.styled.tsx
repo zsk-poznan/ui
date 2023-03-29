@@ -20,5 +20,6 @@ export const StyledAnnouncementNotification = styled.span`
     background: ${(props) => props.theme.notificationDotColor};
     border: 4px solid ${(props) => props.theme.bgColor};
     z-index: 9999;
+    box-shadow: ${(props) => props.theme.boxShadow})};
   }
 `;
