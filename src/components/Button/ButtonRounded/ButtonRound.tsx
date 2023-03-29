@@ -1,5 +1,17 @@
+import { useState } from "react";
 import { StyledButtonRound } from "./ButtonRound.styled";
 
 export const ButtonRound = ({ ...props }) => {
-	return <StyledButtonRound {...props}>{props.label}</StyledButtonRound>;
+  const [isPressed, setIsPressed] = useState<boolean>(false);
+
+  return (
+    <StyledButtonRound
+      onTouchStart={() => setIsPressed(true)}
+      onTouchEnd={() => setIsPressed(false)}
+      isPressed={isPressed}
+      {...props}
+    >
+      {props.children}
+    </StyledButtonRound>
+  );
 };
