@@ -16,7 +16,7 @@ export default {
 const ButtonTemplate = (args) => (
 	<UI.UIThemeProvider theme={getTheme(args.variant)}>
 		<UI.Styles />
-		<UI.Button {...args} />
+		<UI.Button {...args}>{args.label}</UI.Button>
 	</UI.UIThemeProvider>
 );
 

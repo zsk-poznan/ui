@@ -1,3 +1,3 @@
 export type ButtonProps = {
-	label: React.ReactNode;
+	children: React.ReactNode;
 };
