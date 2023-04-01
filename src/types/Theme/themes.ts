@@ -5,6 +5,7 @@ export type Theme = {
 	borderColor: string;
 	primaryColor: string;
 	secondaryColor: string;
+	tertiaryColor: string;
 	classroomFontColor: string;
 	classroomBgColor: {
 		fredry: string;
@@ -12,4 +13,6 @@ export type Theme = {
 		wf: string;
 	};
 	boxShadow: string;
+	secondaryBoxShadow: string;
+	tertiaryBoxShadow: string;
 };

@@ -7,4 +7,3 @@ export {
 	AnnouncementNotification,
 } from "./Header";
 export { ArrowLeft } from "./Icons";
-export { Squircle } from "./Squircle";

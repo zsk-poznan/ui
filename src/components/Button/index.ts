@@ -1,2 +1,2 @@
 export { Button } from "./Button";
-export { ButtonRound } from "./ButtonRounded";
+export { ButtonRound } from "./ButtonRound";

@@ -9,6 +9,5 @@ export {
 	Title,
 	AnnouncementNotification,
 	ArrowLeft,
-	Squircle,
 } from "./components";
 export { UIThemeProvider } from "./providers";

@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 import WebFont from "webfontloader";
 import type { ThemeProviderProps } from "../types";
 
-export const UIThemeProvider = ({ children, theme }: ThemeProviderProps) => {
+export const UIThemeProvider = (props: ThemeProviderProps) => {
 	useEffect(() => {
 		WebFont.load({
 			google: {
@@ -12,5 +12,5 @@ export const UIThemeProvider = ({ children, theme }: ThemeProviderProps) => {
 		});
 	}, []);
 
-	return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+	return <ThemeProvider theme={props.theme}>{props.children}</ThemeProvider>;
 };

@@ -3,11 +3,13 @@ import styled from "styled-components";
 export const StyledButtonRound = styled.button<{ isPressed: boolean }>`
 	background: ${(props) =>
 		props.isPressed
-			? `radial-gradient(circle, ${props.theme.bgColor} 0%, ${props.theme.primaryColor} 100%)`
+			? `radial-gradient(circle, ${props.theme.bgColor} 0%, ${props.theme.tertiaryColor} 100%)`
 			: props.theme.bgColor};
-	transition: all 0.2s ease-in-out;
 	border-radius: 50%;
-	box-shadow: ${(props) => props.theme.boxShadow};
+	box-shadow: ${(props) =>
+		props.isPressed
+			? `inset ${props.theme.boxShadow}, inset ${props.theme.tertiaryBoxShadow}`
+			: `${props.theme.boxShadow}, ${props.theme.secondaryBoxShadow}, ${props.theme.tertiaryBoxShadow}`};
 	width: 75px;
 	height: 75px;
 	border: none;

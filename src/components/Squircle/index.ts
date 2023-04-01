@@ -1,1 +1,0 @@
-export { Squircle } from "./Squircle";
