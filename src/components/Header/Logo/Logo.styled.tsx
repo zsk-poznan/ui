@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { StyledLogoIcon } from "../../Icons/LogoIcon/LogoIcon.styled";
 
 export const StyledLogo = styled.div`
 	display: flex;
@@ -7,10 +8,8 @@ export const StyledLogo = styled.div`
 	gap: 3rem;
 	font-family: ${(props) => props.theme.fontFamily};
 	color: ${(props) => props.theme.fontColor};
-`;
 
-export const StyledLogoIcon = styled.svg`
-	path {
+	& path {
 		fill: ${(props) => props.theme.fontColor};
 	}
 `;

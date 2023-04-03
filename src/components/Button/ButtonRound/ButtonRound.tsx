@@ -2,7 +2,7 @@ import { useState } from "react";
 import { StyledButtonRound } from "./ButtonRound.styled";
 import { ButtonProps } from "../../../types";
 
-export const ButtonRound: React.FC<ButtonProps> = ({ ...props }) => {
+export const ButtonRound = ({ ...props }: ButtonProps): JSX.Element => {
 	const [isPressed, setIsPressed] = useState<boolean>(false);
 
 	return (

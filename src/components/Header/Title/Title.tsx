@@ -3,7 +3,7 @@ import type { TitleProps } from "../../../types";
 
 export const Title = (props: TitleProps): JSX.Element => {
 	return (
-		<StyledTitle>
+		<StyledTitle {...props}>
 			{props.children}
 			{props.headerTitle}
 		</StyledTitle>

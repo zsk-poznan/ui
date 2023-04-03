@@ -4,7 +4,7 @@ export const StyledButton = styled.button<{ isPressed: boolean }>`
 	background: ${(props) =>
 		props.isPressed
 			? `radial-gradient(circle, ${props.theme.bgColor} 0%, ${props.theme.tertiaryColor} 100%)`
-			: props.theme.primaryColor};
+			: props.theme.bgColor};
 	border-radius: ${(props) => props.theme.borderRadius};
 	box-shadow: ${(props) =>
 		props.isPressed

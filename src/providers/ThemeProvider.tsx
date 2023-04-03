@@ -12,5 +12,5 @@ export const UIThemeProvider = (props: ThemeProviderProps) => {
 		});
 	}, []);
 
-	return <ThemeProvider theme={props.theme}>{props.children}</ThemeProvider>;
+	return <ThemeProvider {...props}>{props.children}</ThemeProvider>;
 };

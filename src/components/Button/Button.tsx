@@ -2,7 +2,7 @@ import { useState } from "react";
 import { StyledButton } from "./Button.styled";
 import type { ButtonProps } from "../../types/button";
 
-export const Button: React.FC<ButtonProps> = ({ ...props }) => {
+export const Button = ({ ...props }: ButtonProps): JSX.Element => {
 	const [isPressed, setIsPressed] = useState<boolean>(false);
 
 	return (

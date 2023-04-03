@@ -1,11 +1,11 @@
 import React from "react";
 import { ComponentMeta } from "@storybook/react";
-import * as UI from "../src";
 import { getTheme } from "./utils";
+import * as UI from "../src";
 
 export default {
-	title: "Components/Header/Title",
-	component: UI.Title,
+	title: "Components/Table",
+	component: UI.Table,
 	argTypes: {
 		variant: {
 			control: { type: "inline-radio", options: ["Light", "Dark"] },
@@ -14,23 +14,20 @@ export default {
 	parameters: {
 		layout: "fullscreen",
 	},
-} as ComponentMeta<typeof UI.Title>;
+} as ComponentMeta<typeof UI.Table>;
 
-const TitleTemplate = (args) => (
+const TableTemplate = (args) => (
 	<UI.UIThemeProvider theme={getTheme(args.variant)}>
 		<UI.Styles />
-		<UI.Header>
-			<UI.Title {...args}>
-				<UI.ButtonRound>
-					<UI.ArrowLeft />
-				</UI.ButtonRound>
-			</UI.Title>
-		</UI.Header>
+		<UI.Table>
+			<UI.THead>
+				<UI.TRow>asd</UI.TRow>
+			</UI.THead>
+		</UI.Table>
 	</UI.UIThemeProvider>
 );
 
-export const Default = TitleTemplate.bind({});
+export const Default = TableTemplate.bind({});
 Default.args = {
-	headerTitle: "Wszystkie zastępstwa",
 	variant: "Light",
 };

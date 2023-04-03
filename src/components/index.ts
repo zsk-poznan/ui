@@ -6,4 +6,5 @@ export {
 	Title,
 	AnnouncementNotification,
 } from "./Header";
-export { ArrowLeft } from "./Icons";
+export { ArrowLeft, LogoIcon } from "./Icons";
+export { Table, THead, TRow, TData } from "./Table";
