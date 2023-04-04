@@ -1,19 +1,32 @@
-import React, { TableHTMLAttributes } from "react";
+import { ComponentPropsWithRef, TableHTMLAttributes } from "react";
 
-export type TableProps = {
+export type TableProps = TableHTMLAttributes<HTMLTableElement> & {
 	children:
-		| React.ReactElement<THeadProps | TRowProps>
-		| React.ReactElement<THeadProps | TRowProps>[];
-} & TableHTMLAttributes<HTMLTableElement>;
+		| React.ReactElement<THeadProps | TBodyProps>
+		| React.ReactElement<THeadProps | TBodyProps>[];
+};
 
-export type THeadProps = {
+export type THeadProps = TableHTMLAttributes<HTMLTableSectionElement> & {
 	children: React.ReactElement<TRowProps> | React.ReactElement<TRowProps>[];
-} & TableHTMLAttributes<HTMLTableCellElement>;
+};
 
-export type TRowProps = {
-	children: React.ReactNode;
-} & TableHTMLAttributes<HTMLTableRowElement>;
+export type THeadingProps = TableHTMLAttributes<HTMLTableCellElement> &
+	ComponentPropsWithRef<"th"> & {
+		children: React.ReactNode;
+	};
 
-export type TDataProps = {
+export type TRowProps = TableHTMLAttributes<HTMLTableRowElement> & {
+	children:
+		| React.ReactElement<THeadingProps>
+		| React.ReactElement<THeadingProps>[];
+};
+
+export type TDataProps = TableHTMLAttributes<HTMLTableCellElement> &
+	ComponentPropsWithRef<"td"> & {
+		children: React.ReactNode;
+		tdWidth: string;
+	};
+
+export type TBodyProps = TableHTMLAttributes<HTMLTableSectionElement> & {
 	children: React.ReactNode;
-} & Array<TableHTMLAttributes<HTMLTableCellElement>>;
+};

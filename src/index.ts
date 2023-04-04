@@ -14,6 +14,8 @@ export {
 	THead,
 	TRow,
 	TData,
+	THeading,
+	TBody,
 } from "./components";
 export { UIThemeProvider } from "./providers";
 export {
@@ -26,6 +28,8 @@ export {
 	THeadProps,
 	TRowProps,
 	TDataProps,
+	THeadingProps,
+	TBodyProps,
 	Theme,
 	ThemeProviderProps,
 } from "./types";

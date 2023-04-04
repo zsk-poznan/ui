@@ -7,4 +7,11 @@ export type {
 	AnnouncementNotificationProps,
 } from "./header";
 export type { Theme, ThemeProviderProps } from "./theme";
-export type { TableProps, THeadProps, TRowProps, TDataProps } from "./table";
+export type {
+	TableProps,
+	THeadProps,
+	TRowProps,
+	TDataProps,
+	THeadingProps,
+	TBodyProps,
+} from "./table";
