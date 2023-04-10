@@ -1,8 +1,11 @@
 import { StyledLogo, StyledLogoLabel } from "./Logo.styled";
-import { LogoIcon } from "../../Icons";
-import type { LogoProps } from "../../../types";
+import { LogoIcon } from "src/components/Icons";
 
-export const Logo = (props: LogoProps): JSX.Element => (
+type LogoProps = {
+	label: string;
+} & React.HTMLAttributes<HTMLSpanElement>;
+
+export const Logo = (props: LogoProps) => (
 	<StyledLogo {...props}>
 		<LogoIcon />
 		<StyledLogoLabel>{props.label}</StyledLogoLabel>

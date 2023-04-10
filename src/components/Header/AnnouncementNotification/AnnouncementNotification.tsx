@@ -2,11 +2,14 @@ import {
 	StyledAnnouncementNotification,
 	StyledAnnouncementNotificationWrapper,
 } from "./AnnouncementNotification.styled";
-import type { AnnouncementNotificationProps } from "../../../types";
+
+type AnnouncementNotificationProps = {
+	children: React.ReactNode;
+};
 
 export const AnnouncementNotification = (
 	props: AnnouncementNotificationProps
-): JSX.Element => {
+) => {
 	return (
 		<StyledAnnouncementNotificationWrapper>
 			{props.children}

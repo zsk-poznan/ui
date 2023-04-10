@@ -1,6 +1,9 @@
 import { StyledHeader } from "./Header.styled";
-import type { HeaderProps } from "../../types";
 
-export const Header = (props: HeaderProps): JSX.Element => {
+type HeaderProps = {
+	children: React.ReactNode;
+} & React.HTMLAttributes<HTMLDivElement>;
+
+export const Header = (props: HeaderProps) => {
 	return <StyledHeader {...props}>{props.children}</StyledHeader>;
 };

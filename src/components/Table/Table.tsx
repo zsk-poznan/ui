@@ -1,6 +1,14 @@
+import { TableHTMLAttributes } from "react";
 import { StyledTable } from "./Table.styled";
-import type { TableProps } from "../../types";
+import { TBodyProps } from "./TBody";
+import { THeadProps } from "./THead";
 
-export const Table = (props: TableProps): JSX.Element => {
+export type TableProps = TableHTMLAttributes<HTMLTableElement> & {
+	children:
+		| React.ReactElement<THeadProps | TBodyProps>
+		| React.ReactElement<THeadProps | TBodyProps>[];
+};
+
+export const Table = (props: TableProps) => {
 	return <StyledTable {...props}>{props.children}</StyledTable>;
 };

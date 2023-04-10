@@ -1,6 +1,11 @@
+import { TableHTMLAttributes } from "react";
 import { StyledTHead } from "./THead.styled";
-import type { THeadProps } from "../../../types";
+import { TRowProps } from "../TRow";
 
-export const THead = (props: THeadProps): JSX.Element => {
+export type THeadProps = TableHTMLAttributes<HTMLTableSectionElement> & {
+	children: React.ReactElement<TRowProps> | React.ReactElement<TRowProps>[];
+};
+
+export const THead = (props: THeadProps) => {
 	return <StyledTHead {...props}>{props.children}</StyledTHead>;
 };

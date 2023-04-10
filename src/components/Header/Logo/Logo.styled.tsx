@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { StyledLogoIcon } from "../../Icons/LogoIcon/LogoIcon.styled";
 
 export const StyledLogo = styled.div`
 	display: flex;

@@ -1,4 +1,4 @@
-export { Button, ButtonRound } from "./Button";
+export { Button } from "./Button";
 export {
 	Header,
 	Logo,

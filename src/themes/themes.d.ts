@@ -18,8 +18,3 @@ export type Theme = {
 	tertiaryBoxShadow: string;
 	dropShadow: string;
 };
-
-export type ThemeProviderProps = {
-	children: React.ReactNode;
-	theme: Theme | React.Dispatch<React.SetStateAction<Theme>>;
-};

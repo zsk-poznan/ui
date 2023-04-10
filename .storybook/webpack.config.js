@@ -1,13 +1,7 @@
-module.exports = {
-  entry: "./src/index.js",
-  module: {
-    rules: [
-      //...
-      {
-        test: /\.(png|jp(e*)g|svg|gif)$/,
-        type: "asset/resource",
-      },
-    ],
-  },
-  //...
+const path = require("path");
+
+module.exports = ({ config }) => {
+	config.resolve.modules = [path.resolve(__dirname, ".."), "node_modules"];
+
+	return config;
 };

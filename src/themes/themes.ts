@@ -1,4 +1,4 @@
-import type { Theme } from "../types";
+import type { Theme } from "./themes.d";
 
 const basicTheme = {
 	fontFamily: "Poppins, sans-serif",
@@ -8,13 +8,13 @@ const basicTheme = {
 		wf: "#7CE074",
 	},
 	notificationDotColor: "#e41111",
-	borderRadius: "16px",
+	borderRadius: "12px",
 };
 
 export const lightTheme: Theme = {
 	...basicTheme,
-	bgColor: "#EEF3FA",
-	fontColor: "#313e53",
+	bgColor: "#E7E7EF",
+	fontColor: "#333842",
 	secondaryFontColor: "#9AA5B6",
 	borderColor: "#d2d3db",
 	primaryColor: "#E7EEF5",

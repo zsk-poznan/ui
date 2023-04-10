@@ -1,5 +1,10 @@
-import type { TBodyProps } from "../../../types/table";
+import { TableHTMLAttributes } from "react";
+import { TRowProps } from "../TRow";
 
-export const TBody = ({ ...props }: TBodyProps): JSX.Element => {
+export type TBodyProps = TableHTMLAttributes<HTMLTableSectionElement> & {
+	children: React.ReactElement<TRowProps> | React.ReactElement<TRowProps>[];
+};
+
+export const TBody = ({ ...props }: TBodyProps) => {
 	return <tbody {...props}>{props.children}</tbody>;
 };
