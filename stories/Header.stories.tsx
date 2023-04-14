@@ -1,5 +1,5 @@
 import React from "react";
-import { ComponentMeta } from "@storybook/react";
+import { Meta } from "@storybook/react";
 import { getTheme } from "./utils";
 import * as UI from "../src";
 
@@ -17,7 +17,7 @@ export default {
 	parameters: {
 		layout: "fullscreen",
 	},
-} as ComponentMeta<typeof UI.Header>;
+} as Meta<typeof UI.Header>;
 
 const HeaderTemplate = (args) => (
 	<UI.UIThemeProvider theme={getTheme(args.variant)}>

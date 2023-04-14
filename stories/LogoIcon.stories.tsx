@@ -1,5 +1,5 @@
 import React from "react";
-import { ComponentMeta } from "@storybook/react";
+import { Meta } from "@storybook/react";
 import * as UI from "../src";
 import { getTheme } from "./utils";
 
@@ -14,7 +14,7 @@ export default {
 	parameters: {
 		layout: "fullscreen",
 	},
-} as ComponentMeta<typeof UI.LogoIcon>;
+} as Meta<typeof UI.LogoIcon>;
 
 const LogoIconTemplate = (args) => (
 	<UI.UIThemeProvider theme={getTheme(args.variant)}>

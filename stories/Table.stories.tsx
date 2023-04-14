@@ -1,5 +1,5 @@
 import React from "react";
-import { ComponentMeta } from "@storybook/react";
+import { Meta } from "@storybook/react";
 import { getTheme } from "./utils";
 import * as UI from "../src";
 
@@ -14,7 +14,7 @@ export default {
 	parameters: {
 		layout: "fullscreen",
 	},
-} as ComponentMeta<typeof UI.Table>;
+} as Meta<typeof UI.Table>;
 
 const TableTemplate = (args) => (
 	<UI.UIThemeProvider theme={getTheme(args.variant)}>
