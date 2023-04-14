@@ -1,6 +1,6 @@
 import { StyledLogoIcon } from "./LogoIcon.styled";
 
-export const LogoIcon = ({ ...props }): JSX.Element => {
+export const LogoIcon = ({ ...props }) => {
 	return (
 		<StyledLogoIcon
 			width="57"

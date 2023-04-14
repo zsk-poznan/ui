@@ -25,9 +25,9 @@ const HeaderTemplate = (args) => (
 		<UI.Header>
 			<UI.Logo {...args} />
 			<UI.Title {...args}>
-				<UI.ButtonRound>
+				<UI.Button rounded>
 					<UI.ArrowLeft />
-				</UI.ButtonRound>
+				</UI.Button>
 			</UI.Title>
 			{/On/i.test(args.notification) ? (
 				<UI.AnnouncementNotification>

@@ -1,6 +1,11 @@
+import { ComponentPropsWithRef, TableHTMLAttributes } from "react";
 import { StyledTHeading } from "./THeading.styled";
-import type { THeadingProps } from "../../../types/table";
 
-export const THeading = (props: THeadingProps): JSX.Element => {
+export type THeadingProps = TableHTMLAttributes<HTMLTableCellElement> &
+	ComponentPropsWithRef<"th"> & {
+		children: React.ReactNode;
+	};
+
+export const THeading = (props: THeadingProps) => {
 	return <StyledTHeading {...props}>{props.children}</StyledTHeading>;
 };

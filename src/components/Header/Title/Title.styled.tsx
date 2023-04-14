@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { StyledButtonRound } from "../../Button/ButtonRound/ButtonRound.styled";
+import { StyledButtonRound } from "src/components/Button/Button.styled";
 
 export const StyledTitle = styled.h1`
 	display: flex;

@@ -1,7 +1,10 @@
 import { StyledDate } from "./Date.styled";
-import type { DateProps } from "../../../types";
 
-export const SubstitutionDate = (props: DateProps): JSX.Element => {
+type DateProps = {
+	date: string | Date;
+} & React.HTMLAttributes<HTMLSpanElement>;
+
+export const SubstitutionDate = (props: DateProps) => {
 	return (
 		<StyledDate {...props}>
 			{props.date.toLocaleString("pl-PL", { timeZone: "UTC" })}

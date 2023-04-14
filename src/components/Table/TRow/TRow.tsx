@@ -1,5 +1,12 @@
-import type { TRowProps } from "../../../types/table";
+import { TableHTMLAttributes } from "react";
+import { THeadingProps } from "../THeading";
 
-export const TRow = ({ ...props }: TRowProps): JSX.Element => {
+export type TRowProps = TableHTMLAttributes<HTMLTableRowElement> & {
+	children:
+		| React.ReactElement<THeadingProps>
+		| React.ReactElement<THeadingProps>[];
+};
+
+export const TRow = ({ ...props }: TRowProps) => {
 	return <tr {...props}>{props.children}</tr>;
 };

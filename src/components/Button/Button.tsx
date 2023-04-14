@@ -1,18 +1,35 @@
-import { useState } from "react";
-import { StyledButton } from "./Button.styled";
-import type { ButtonProps } from "../../types/button";
+import { StyledButton, StyledButtonRound } from "./Button.styled";
+import { useBoolean } from "src/hooks";
 
-export const Button = ({ ...props }: ButtonProps): JSX.Element => {
-	const [isPressed, setIsPressed] = useState<boolean>(false);
+type ButtonProps = {
+	children: React.ReactNode;
+	rounded?: boolean;
+};
 
-	return (
-		<StyledButton
-			onTouchStart={() => setIsPressed(true)}
-			onTouchEnd={() => setIsPressed(false)}
-			isPressed={isPressed}
-			{...props}
-		>
-			{props.children}
-		</StyledButton>
-	);
+export const Button = (props: ButtonProps) => {
+	const { value, setTrue, setFalse } = useBoolean(false);
+
+	if (props.rounded) {
+		return (
+			<StyledButtonRound
+				onTouchStart={setTrue}
+				onTouchEnd={setFalse}
+				isPressed={value}
+				{...props}
+			>
+				{props.children}
+			</StyledButtonRound>
+		);
+	} else {
+		return (
+			<StyledButton
+				onTouchStart={setTrue}
+				onTouchEnd={setFalse}
+				isPressed={value}
+				{...props}
+			>
+				{props.children}
+			</StyledButton>
+		);
+	}
 };

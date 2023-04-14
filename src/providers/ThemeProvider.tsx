@@ -1,7 +1,12 @@
 import { useEffect } from "react";
 import { ThemeProvider } from "styled-components";
+import { Theme } from "src/themes";
 import WebFont from "webfontloader";
-import type { ThemeProviderProps } from "../types";
+
+type ThemeProviderProps = {
+	children: React.ReactNode;
+	theme: Theme | React.Dispatch<React.SetStateAction<Theme>>;
+};
 
 export const UIThemeProvider = (props: ThemeProviderProps) => {
 	useEffect(() => {

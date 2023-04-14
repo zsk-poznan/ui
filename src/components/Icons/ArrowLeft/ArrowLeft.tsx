@@ -1,6 +1,6 @@
 import { StyledArrowLeft } from "./ArrowLeft.styled";
 
-export const ArrowLeft = ({ ...props }): JSX.Element => {
+export const ArrowLeft = ({ ...props }) => {
 	return (
 		<StyledArrowLeft
 			xmlns="http://www.w3.org/2000/svg"
