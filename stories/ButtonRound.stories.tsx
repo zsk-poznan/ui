@@ -1,5 +1,5 @@
 import React from "react";
-import { ComponentMeta } from "@storybook/react";
+import { Meta } from "@storybook/react";
 import * as UI from "../src";
 import { getTheme } from "./utils";
 
@@ -11,7 +11,7 @@ export default {
 			control: { type: "inline-radio", options: ["Light", "Dark"] },
 		},
 	},
-} as ComponentMeta<typeof UI.Button>;
+} as Meta<typeof UI.Button>;
 
 const ButtonRoundTemplate = (args) => (
 	<UI.UIThemeProvider theme={getTheme(args.variant)}>

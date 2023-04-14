@@ -1,5 +1,5 @@
 import React from "react";
-import { ComponentMeta } from "@storybook/react";
+import { Meta } from "@storybook/react";
 import * as UI from "../src";
 import { getTheme } from "./utils";
 
@@ -14,16 +14,16 @@ export default {
 	parameters: {
 		layout: "fullscreen",
 	},
-} as ComponentMeta<typeof UI.Title>;
+} as Meta<typeof UI.Title>;
 
 const TitleTemplate = (args) => (
 	<UI.UIThemeProvider theme={getTheme(args.variant)}>
 		<UI.Styles />
 		<UI.Header>
 			<UI.Title {...args}>
-				<UI.ButtonRound>
+				<UI.Button rounded>
 					<UI.ArrowLeft />
-				</UI.ButtonRound>
+				</UI.Button>
 			</UI.Title>
 		</UI.Header>
 	</UI.UIThemeProvider>
