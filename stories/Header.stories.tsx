@@ -8,10 +8,12 @@ export default {
 	component: UI.Header,
 	argTypes: {
 		variant: {
-			control: { type: "inline-radio", options: ["Light", "Dark"] },
+			control: { type: "inline-radio" },
+			options: ["Light", "Dark"],
 		},
 		notification: {
-			control: { type: "inline-radio", options: ["On", "Off"] },
+			control: { type: "inline-radio" },
+			options: ["On", "Off"],
 		},
 	},
 	parameters: {
@@ -20,7 +22,7 @@ export default {
 } as Meta<typeof UI.Header>;
 
 const HeaderTemplate = (args) => (
-	<UI.UIThemeProvider theme={getTheme(args.variant)}>
+	<UI.ThemeProvider theme={getTheme(args.variant)}>
 		<UI.Styles />
 		<UI.Header>
 			<UI.Logo {...args} />
@@ -37,10 +39,11 @@ const HeaderTemplate = (args) => (
 				<UI.SubstitutionDate {...args} />
 			)}
 		</UI.Header>
-	</UI.UIThemeProvider>
+	</UI.ThemeProvider>
 );
 
 export const Default = HeaderTemplate.bind({});
+
 Default.args = {
 	label: "Zastępstwa",
 	headerTitle: "Wszystkie zastępstwa",

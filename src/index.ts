@@ -16,5 +16,5 @@ export {
 	THeading,
 	TBody,
 } from "./components";
-export { UIThemeProvider } from "./providers";
+export { ThemeProvider } from "./providers";
 export { useBoolean } from "./hooks";

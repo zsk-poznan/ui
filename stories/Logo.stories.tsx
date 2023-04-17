@@ -8,7 +8,8 @@ export default {
 	component: UI.Logo,
 	argTypes: {
 		variant: {
-			control: { type: "inline-radio", options: ["Light", "Dark"] },
+			control: { type: "inline-radio" },
+			options: ["Light", "Dark"],
 		},
 	},
 	parameters: {
@@ -17,10 +18,10 @@ export default {
 } as Meta<typeof UI.Logo>;
 
 const LogoTemplate = (args) => (
-	<UI.UIThemeProvider theme={getTheme(args.variant)}>
+	<UI.ThemeProvider theme={getTheme(args.variant)}>
 		<UI.Styles />
 		<UI.Logo {...args} />
-	</UI.UIThemeProvider>
+	</UI.ThemeProvider>
 );
 
 export const Default = LogoTemplate.bind({});

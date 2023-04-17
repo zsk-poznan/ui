@@ -8,8 +8,9 @@ type ButtonProps = {
 
 export const Button = (props: ButtonProps) => {
 	const { value, setTrue, setFalse } = useBoolean(false);
+	const { children, rounded } = props;
 
-	if (props.rounded) {
+	if (rounded) {
 		return (
 			<StyledButtonRound
 				onTouchStart={setTrue}
@@ -17,7 +18,7 @@ export const Button = (props: ButtonProps) => {
 				isPressed={value}
 				{...props}
 			>
-				{props.children}
+				{children}
 			</StyledButtonRound>
 		);
 	} else {
@@ -28,7 +29,7 @@ export const Button = (props: ButtonProps) => {
 				isPressed={value}
 				{...props}
 			>
-				{props.children}
+				{children}
 			</StyledButton>
 		);
 	}
