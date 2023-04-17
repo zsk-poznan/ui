@@ -1,1 +1,1 @@
-export { UIThemeProvider } from "./ThemeProvider";
+export { ThemeProvider } from "./ThemeProvider";

@@ -5,9 +5,10 @@ export const LogoIcon = ({ ...props }) => {
 		<StyledLogoIcon
 			width="57"
 			height="57"
-			viewBox="0 0 57 57"
-			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 57 57"
+			focusable="false"
+			aria-hidden="true"
 			{...props}
 		>
 			<path

@@ -5,6 +5,8 @@ export const ArrowLeft = ({ ...props }) => {
 		<StyledArrowLeft
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 24 24"
+			focusable="false"
+			aria-hidden="true"
 			{...props}
 		>
 			<path d="M0 0h24v24H0V0z" fill="none" />

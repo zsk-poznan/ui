@@ -1,14 +1,14 @@
 import { useEffect } from "react";
-import { ThemeProvider } from "styled-components";
-import { Theme } from "src/themes";
+import * as Styled from "styled-components";
 import WebFont from "webfontloader";
+import type { Theme } from "src/themes";
 
 type ThemeProviderProps = {
 	children: React.ReactNode;
-	theme: Theme | React.Dispatch<React.SetStateAction<Theme>>;
+	theme: Theme;
 };
 
-export const UIThemeProvider = (props: ThemeProviderProps) => {
+export const ThemeProvider = (props: ThemeProviderProps) => {
 	useEffect(() => {
 		WebFont.load({
 			google: {
@@ -17,5 +17,5 @@ export const UIThemeProvider = (props: ThemeProviderProps) => {
 		});
 	}, []);
 
-	return <ThemeProvider {...props}>{props.children}</ThemeProvider>;
+	return <Styled.ThemeProvider {...props}>{props.children}</Styled.ThemeProvider>;
 };

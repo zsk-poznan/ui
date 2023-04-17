@@ -8,7 +8,8 @@ export default {
 	component: UI.Table,
 	argTypes: {
 		variant: {
-			control: { type: "inline-radio", options: ["Light", "Dark"] },
+			control: { type: "inline-radio" },
+			options: ["Light", "Dark"],
 		},
 	},
 	parameters: {
@@ -17,7 +18,7 @@ export default {
 } as Meta<typeof UI.Table>;
 
 const TableTemplate = (args) => (
-	<UI.UIThemeProvider theme={getTheme(args.variant)}>
+	<UI.ThemeProvider theme={getTheme(args.variant)}>
 		<UI.Styles />
 		<UI.Table>
 			<UI.THead>
@@ -41,7 +42,7 @@ const TableTemplate = (args) => (
 				</UI.TRow>
 			</UI.TBody>
 		</UI.Table>
-	</UI.UIThemeProvider>
+	</UI.ThemeProvider>
 );
 
 export const Default = TableTemplate.bind({});

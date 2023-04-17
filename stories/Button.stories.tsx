@@ -1,5 +1,5 @@
 import React from "react";
-import { Meta } from "@storybook/react";
+import type { Meta } from "@storybook/react";
 import * as UI from "../src";
 import { getTheme } from "./utils";
 
@@ -8,22 +8,22 @@ export default {
 	component: UI.Button,
 	argTypes: {
 		variant: {
-			control: { type: "inline-radio", options: ["Light", "Dark"] },
+			control: { type: "inline-radio" },
+			options: ["Light", "Dark"],
 		},
 	},
 } as Meta<typeof UI.Button>;
 
 const ButtonTemplate = (args) => (
-	<UI.UIThemeProvider theme={getTheme(args.variant)}>
+	<UI.ThemeProvider theme={getTheme(args.variant)}>
 		<UI.Styles />
 		<UI.Button {...args}>{args.label}</UI.Button>
-	</UI.UIThemeProvider>
+	</UI.ThemeProvider>
 );
 
 export const Default = ButtonTemplate.bind({});
+
 Default.args = {
-	label: "Example Button",
-	borderRadius: "12px",
-	corners: "180, 5",
+	label: "Example button",
 	variant: "Light",
 };

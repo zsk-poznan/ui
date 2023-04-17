@@ -7,6 +7,6 @@ export type TDataProps = TableHTMLAttributes<HTMLTableCellElement> &
 		tdWidth: string;
 	};
 
-export const TData = ({ ...props }: TDataProps) => {
+export const TData = (props: TDataProps) => {
 	return <StyledTData {...props}>{props.children}</StyledTData>;
 };

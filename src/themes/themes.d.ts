@@ -13,6 +13,9 @@ export type Theme = {
 		bukowska: string;
 		wf: string;
 	};
+	primaryShadow: string;
+	secondaryShadow: string;
+	tertiaryShadow: string;
 	boxShadow: string;
 	secondaryBoxShadow: string;
 	tertiaryBoxShadow: string;

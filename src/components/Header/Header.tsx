@@ -5,5 +5,6 @@ type HeaderProps = {
 } & React.HTMLAttributes<HTMLDivElement>;
 
 export const Header = (props: HeaderProps) => {
-	return <StyledHeader {...props}>{props.children}</StyledHeader>;
+	const { children } = props;
+	return <StyledHeader {...props}>{children}</StyledHeader>;
 };

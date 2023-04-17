@@ -8,7 +8,8 @@ export default {
 	component: UI.Title,
 	argTypes: {
 		variant: {
-			control: { type: "inline-radio", options: ["Light", "Dark"] },
+			control: { type: "inline-radio" },
+			options: ["Light", "Dark"],
 		},
 	},
 	parameters: {
@@ -17,7 +18,7 @@ export default {
 } as Meta<typeof UI.Title>;
 
 const TitleTemplate = (args) => (
-	<UI.UIThemeProvider theme={getTheme(args.variant)}>
+	<UI.ThemeProvider theme={getTheme(args.variant)}>
 		<UI.Styles />
 		<UI.Header>
 			<UI.Title {...args}>
@@ -26,7 +27,7 @@ const TitleTemplate = (args) => (
 				</UI.Button>
 			</UI.Title>
 		</UI.Header>
-	</UI.UIThemeProvider>
+	</UI.ThemeProvider>
 );
 
 export const Default = TitleTemplate.bind({});
