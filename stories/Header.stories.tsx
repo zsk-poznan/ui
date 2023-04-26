@@ -26,11 +26,6 @@ const HeaderTemplate = (args) => (
 		<UI.Styles />
 		<UI.Header>
 			<UI.Logo {...args} />
-			<UI.Title {...args}>
-				<UI.Button rounded>
-					<UI.ArrowLeft />
-				</UI.Button>
-			</UI.Title>
 			{/On/i.test(args.notification) ? (
 				<UI.AnnouncementNotification>
 					<UI.SubstitutionDate {...args} />
