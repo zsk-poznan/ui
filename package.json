@@ -38,6 +38,7 @@
     "test": "jest --watch"
   },
   "dependencies": {
+    "jest": "^29.5.0",
     "styled-components": "^5.3.9",
     "webfontloader": "^1.6.28"
   }
