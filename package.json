@@ -1,6 +1,6 @@
 {
   "name": "@zsk-poznan/ui",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "main": "build/index.js",
   "license": "MIT",
   "peerDependencies": {
