@@ -119,15 +119,22 @@
 `,THead=props=>(0,jsx_runtime.jsx)(StyledTHead,{...props,children:props.children});THead.displayName="THead";const StyledTRow=styled_components_browser_esm.ZP.tr`
 	display: table-row;
 	border-bottom: 1px solid ${props=>props.theme.borderColor};
+
+	&:has(td) {
+		-webkit-box-shadow: 0px -5px 1px -3px rgba(211, 213, 226, 1);
+		-moz-box-shadow: 0px -5px 1px -3px rgba(211, 213, 226, 1);
+		box-shadow: 0px -5px 1px -3px rgba(211, 213, 226, 1);
+	}
 `,TRow=props=>(0,jsx_runtime.jsx)(StyledTRow,{...props,children:props.children});TRow.displayName="TRow";const StyledTData=styled_components_browser_esm.ZP.td`
 	display: table-cell;
 	text-align: center;
 	width: ${props=>props.tdWidth};
+	padding: 1rem 2rem;
 `,TData=props=>(0,jsx_runtime.jsx)(StyledTData,{...props,children:props.children});TData.displayName="TData";const StyledTHeading=styled_components_browser_esm.ZP.th`
 	display: table-cell;
 	font-weight: 700;
 	text-align: center;
-	padding: 0.75rem;
+	padding: 2rem;
 `,THeading=props=>(0,jsx_runtime.jsx)(StyledTHeading,{...props,children:props.children});THeading.displayName="THeading";const TBody=props=>(0,jsx_runtime.jsx)("tbody",{...props,children:props.children});TBody.displayName="TBody";const StyledTitle=styled_components_browser_esm.ZP.h1`
 	display: flex;
 	align-items: center;
@@ -146,4 +153,4 @@
 		height: 45px;
 	}
 `,Title=props=>(0,jsx_runtime.jsxs)(StyledTitle,{...props,children:[props.children,props.headerTitle]});Title.displayName="Title";var webfontloader=__webpack_require__("./node_modules/webfontloader/webfontloader.js"),webfontloader_default=__webpack_require__.n(webfontloader);const ThemeProvider=props=>((0,react.useEffect)((()=>{webfontloader_default().load({google:{families:["Poppins:300,400,500,600,700,800,900"]}})}),[]),(0,jsx_runtime.jsx)(styled_components_browser_esm.f6,{...props,children:props.children}));ThemeProvider.displayName="ThemeProvider"},"./stories/utils/index.ts":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{g:()=>getTheme});var src=__webpack_require__("./src/index.ts");const getTheme=variant=>/light/i.test(variant)?src.Wb:src.$_},"./stories/Title.stories.tsx":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.r(__webpack_exports__),__webpack_require__.d(__webpack_exports__,{Default:()=>Default,__namedExportsOrder:()=>__namedExportsOrder,default:()=>__WEBPACK_DEFAULT_EXPORT__});__webpack_require__("./node_modules/react/index.js");var _src__WEBPACK_IMPORTED_MODULE_1__=__webpack_require__("./src/index.ts"),_utils__WEBPACK_IMPORTED_MODULE_2__=__webpack_require__("./stories/utils/index.ts"),react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__=__webpack_require__("./node_modules/react/jsx-runtime.js");const __WEBPACK_DEFAULT_EXPORT__={title:"Components/Header/Title",component:_src__WEBPACK_IMPORTED_MODULE_1__.Dx,argTypes:{variant:{control:{type:"inline-radio"},options:["Light","Dark"]}},parameters:{layout:"fullscreen"}},TitleTemplate=args=>(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_src__WEBPACK_IMPORTED_MODULE_1__.f6,{theme:(0,_utils__WEBPACK_IMPORTED_MODULE_2__.g)(args.variant),children:[(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_src__WEBPACK_IMPORTED_MODULE_1__.z0,{}),(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_src__WEBPACK_IMPORTED_MODULE_1__.h4,{children:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_src__WEBPACK_IMPORTED_MODULE_1__.Dx,{...args,children:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_src__WEBPACK_IMPORTED_MODULE_1__.zx,{rounded:!0,children:(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_src__WEBPACK_IMPORTED_MODULE_1__.Xd,{})})})})]});TitleTemplate.displayName="TitleTemplate";const Default=TitleTemplate.bind({});Default.args={headerTitle:"Wszystkie zastępstwa",variant:"Light"};const __namedExportsOrder=["Default"];Default.parameters={...Default.parameters,docs:{...Default.parameters?.docs,source:{originalSource:"args => /*#__PURE__*/_jsxs(UI.ThemeProvider, {\n  theme: getTheme(args.variant),\n  children: [/*#__PURE__*/_jsx(UI.Styles, {}), /*#__PURE__*/_jsx(UI.Header, {\n    children: /*#__PURE__*/_jsx(UI.Title, {\n      ...args,\n      children: /*#__PURE__*/_jsx(UI.Button, {\n        rounded: true,\n        children: /*#__PURE__*/_jsx(UI.ArrowLeft, {})\n      })\n    })\n  })]\n})",...Default.parameters?.docs?.source}}}}}]);
-//# sourceMappingURL=Title-stories.f20c6001.iframe.bundle.js.map
+//# sourceMappingURL=Title-stories.39cbfdb8.iframe.bundle.js.map
