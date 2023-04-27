@@ -40,6 +40,14 @@ const TableTemplate = (args) => (
 					<UI.TData tdWidth="15%">37</UI.TData>
 					<UI.TData tdWidth="15%">Brak</UI.TData>
 				</UI.TRow>
+				<UI.TRow>
+					<UI.TData tdWidth="15%">2</UI.TData>
+					<UI.TData tdWidth="15%">Wojciech Kowalski</UI.TData>
+					<UI.TData tdWidth="15%">1B</UI.TData>
+					<UI.TData tdWidth="25%">Matematyka</UI.TData>
+					<UI.TData tdWidth="15%">37</UI.TData>
+					<UI.TData tdWidth="15%">Brak</UI.TData>
+				</UI.TRow>
 			</UI.TBody>
 		</UI.Table>
 	</UI.ThemeProvider>
