@@ -23,6 +23,7 @@ export const StyledButton = styled.button<{ isPressed: boolean }>`
 	&:focus {
 		outline: none;
 		-webkit-tap-highlight-color: transparent;
+		highlight: none;
 	}
 `;
 
