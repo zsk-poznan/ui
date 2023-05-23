@@ -7,8 +7,8 @@ type ButtonProps = {
 };
 
 export const Button = (props: ButtonProps) => {
-	const { value, setTrue, setFalse } = useBoolean(false);
 	const { children, rounded } = props;
+	const { value, setTrue, setFalse } = useBoolean(false);
 
 	if (rounded) {
 		return (
